@@ -40,7 +40,7 @@ class SiswaController extends Controller
 
     	$status = \App\Siswa::create($input);
 
-    	if ($status) return redirect('/')->with('succes', 'Data berhasil ditambahkan');
+    	if ($status) return redirect('/siswa')->with('succes', 'Data berhasil ditambahkan');
     	else return redirect('siswa')->with('error', 'Data gagal ditambahkan');
     }
 
@@ -73,7 +73,7 @@ class SiswaController extends Controller
 
         $status = $result->update($input);
 
-    	if ($status) return redirect('/')->with('succes', 'Data berhasil diubah');
+    	if ($status) return redirect('/siswa')->with('succes', 'Data berhasil diubah');
     	else return redirect('siswa')->with('error', 'Data gagal diubah');
     }
 

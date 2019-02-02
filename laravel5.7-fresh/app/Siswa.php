@@ -23,6 +23,6 @@ class Siswa extends Model
 
     public function kelas()
     {
-    	return $this->hasOne('\App\Kelas', 'id_kelas', 'id_kelas');
+    	return $this->belongsTo('\App\Kelas', 'id_kelas', 'id_kelas');
     }
 }
